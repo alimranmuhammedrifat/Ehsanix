@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ehsanix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section>
+    <header>
+        <label id="playBtn" for="chk">
+            <img src="img/menu.png" alt="not found">
+        </label>
+        <div class="searchbar">
+            <img src="img/search.png" alt="not found">
+            <input type="text" name="search" id="search">
+            <img src="img/mic.png" alt="not found">
+        </div>
+        <div class="phone">
+            <abbr title="Whatsapp"><a href="https://wa.me/+8801861688855?text=Hello%20there!%20I%20need%20help." 
+                onclick="if (window.innerWidth > 400) { this.href='https://web.whatsapp.com/send?phone=+8801861688855&text=Hello%20there!%20I%20need%20help.' }" 
+                target="_blank">
+                <img src="img/phone.png" alt="not found">
+                </a></abbr>
+        </div>
+        <div class="menubar">
+            <a href="#"></a>
+        </div>
+    </header>
+    <main>
+        <div class="portfolio">
+            <img src="img/portfolio-ready.png" alt="not found">
+            <input type="checkbox" name="chk" id="chk">
+            <div class="popup">
+                <div class="item item-1"><img src="img/facebook.webp" alt="not found"></div>
+                <div class="item item-2"><img src="img/youtube.png" alt="not found"></div>
+                <div class="item item-3"><img src="img/instagram.png" alt="not found"></div>
+                <div class="item item-4"><img src="img/tiktok.webp" alt="not found"></div>
+                <div class="item item-a"></div>
+                <div class="item item-b"></div>
+                <div class="item item-c"></div>
+                <div class="item item-d"></div>
+                <div class="item item-e"></div>
+            </div>
+        </div>
+        <div class="name">
+            <h1>ali ehsan</h1>
+            <h3>Brand Designer, P.Tech</h3>
+        </div>
+    </main>
+    <section class="about">
+        <div class="section-header">
+            <img src="img/about.png" alt="not found">
+            <h4>About me</h4>
+        </div>
+        <article>
+            <p>
+                I am a 22-year-old creative professional with a passion for graphic design, branding, and social media management. Over the years, I’ve honed my skills in designing impactful visuals, crafting compelling content, and building brands that resonate with their audience. I’ve managed social media accounts and created marketing materials for a diverse range of businesses, from tech shops like Pangkha Gadget to restaurants such as Akhni Bilash, 99Mil, and Fastfist. <br><br>
+
+                My expertise includes designing banners, posters, and branding elements, as well as planning effective content strategies to engage customers. With a keen eye for aesthetics and a deep understanding of audience behavior, I strive to deliver creative solutions that drive results. As I venture into the freelancing marketplace, I’m excited to collaborate with clients who value creativity and innovation. <br><br>
+
+                Let’s work together to bring your ideas to life!
+            </p>
+        </article>
+    </section>
+</section>
+
+
+
+
+
+<audio id="mySound" src="audio/click-4.mpeg" preload="auto"></audio>
+
+<script>
+  const chk = document.getElementById('chk');
+  const audio = document.getElementById('mySound');
+
+  chk.addEventListener('change', () => {
+    if (chk.checked) {       // only when checked
+      audio.playbackRate = 1;
+      audio.currentTime = 0; // restart audio
+      audio.play().catch(()=>{}); 
+    }
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+

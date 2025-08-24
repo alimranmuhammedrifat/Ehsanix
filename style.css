@@ -1,0 +1,223 @@
+/* universal starts */
+@font-face{
+    font-family: 'Blinker-Regular';
+    src: url(fonts/blinker/Blinker-Regular.ttf);
+}
+@font-face{
+    font-family: 'Blinker-Bold';
+    src: url(fonts/blinker/Blinker-Bold.ttf);
+}
+@font-face{
+    font-family: 'Porcelain';
+    src: url(fonts/porcelain/Porcelain.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* universal ends */
+
+
+section{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+/* header starts */
+header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+#playBtn img, .phone img{
+    width: 30px;
+}
+.searchbar{
+    width: 70%;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #000;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 15px;
+}
+.searchbar img{
+    width: 22px;
+    height: 22px;
+}
+.searchbar input{
+    width: 85%;
+    height: 99%;
+    border: none;
+    outline: none;
+    font-family: 'Blinker-Regular';
+    font-size: 17px;
+}
+/* header ends */
+
+/* main starts */
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main img{
+    max-width: 400px;
+    height: auto;
+    background-color: transparent;
+}
+.portfolio{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+#chk{
+    display: none;
+}
+.popup{
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+    display: none;
+    transition: 0.5s;
+}
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+.item img{
+    width: 50px;
+    background-color: transparent;
+}
+.item-1:hover, .item-2:hover, .item-3:hover, .item-4:hover{
+    scale: 1.3;
+}
+.item-1{
+    grid-area: item-1;
+    justify-content: flex-end;
+    padding-right: 10px;
+    animation: bump 0.8s linear;
+}
+.item-2{
+    grid-area: item-2;
+    justify-content: flex-start;
+    animation: bump 0.8s linear;
+    animation-delay: 0.2s;
+}
+.item-3{
+    grid-area: item-3;
+    align-items: flex-start;
+    animation: bump 0.8s linear;
+    animation-delay: 0.4s;
+}
+.item-4{
+    grid-area: item-4;
+    align-items: flex-start;
+    animation: bump 0.8s linear;
+    animation-delay: 0.6s;
+}
+.item-a{
+    grid-area: item-a;
+}
+.item-b{
+    grid-area: item-b;
+}
+.item-c{
+    grid-area: item-c;
+}
+.item-d{
+    grid-area: item-d;
+}
+.item-e{
+    grid-area: item-e;
+}
+
+#chk:checked ~ .popup{
+    opacity: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 'item-1 item-a item-2'
+                         'item-c item-d item-e'
+                         'item-3 item-b item-4';
+    
+}
+.name{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -150px;
+    z-index: 2;
+}
+.name h1{
+    text-transform: capitalize;
+    font-size: 80pt;
+    font-family: 'porcelain';
+    color: #ed2828;
+}
+.name h3{
+    font-family: 'Blinker-Regular';
+    color: #000;
+    font-size: 28px;
+    margin-top: -24px;
+}
+/* main ends */
+
+/* section starts */
+.section-header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+.section-header img{
+    max-width: 70px;
+}
+.section-header h4{
+    font-family: 'Blinker-Bold';
+    font-size: 30px;
+    color: #ed2828;
+    margin-bottom: -25px;
+    margin-left: -10px;
+    text-transform: uppercase;
+}
+article{
+    width: 100%;
+    padding: 10px 20px;
+}
+article p{
+    font-family: 'Blinker-Regular';
+    font-size: 20px;
+    text-align: justify;
+}
+
+
+
+
+
+
+@keyframes bump{
+    0%{opacity: 0; scale: 1;}
+    50%{opacity: 0.5; scale: 1.3;}
+    100%{opacity: 1; scale: 1;}
+}
