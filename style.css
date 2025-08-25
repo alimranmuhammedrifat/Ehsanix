@@ -22,8 +22,12 @@
 
 section{
     width: 100%;
-    min-height: 100vh;
+    height: fit-content;
     background-color: #fff;
+}
+hr{
+    width: 100%;
+    margin: 20px 0 50px;
 }
 
 /* header starts */
@@ -48,7 +52,7 @@ header{
     border-radius: 30px;
     align-items: center;
     justify-content: space-between;
-    padding: 2px 15px;
+    padding: 2px 10px;
 }
 .searchbar img{
     width: 22px;
@@ -60,7 +64,8 @@ header{
     border: none;
     outline: none;
     font-family: 'Blinker-Regular';
-    font-size: 17px;
+    font-size: 18px;
+    margin: 0 5px;
 }
 /* header ends */
 
@@ -102,7 +107,10 @@ main img{
 }
 .item img{
     width: 50px;
-    background-color: transparent;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 0px 20px 20px 20px;
+    box-shadow: #000 2px 2px 10px;
 }
 .item-1:hover, .item-2:hover, .item-3:hover, .item-4:hover{
     scale: 1.3;
@@ -111,25 +119,25 @@ main img{
     grid-area: item-1;
     justify-content: flex-end;
     padding-right: 10px;
-    animation: bump 0.8s linear;
+    animation: bump 0.4s linear;
 }
 .item-2{
     grid-area: item-2;
     justify-content: flex-start;
-    animation: bump 0.8s linear;
-    animation-delay: 0.2s;
+    animation: bump 0.4s linear;
+    animation-delay: 0s;
 }
 .item-3{
     grid-area: item-3;
     align-items: flex-start;
-    animation: bump 0.8s linear;
-    animation-delay: 0.4s;
+    animation: bump 0.4s linear;
+    animation-delay: 0s;
 }
 .item-4{
     grid-area: item-4;
     align-items: flex-start;
-    animation: bump 0.8s linear;
-    animation-delay: 0.6s;
+    animation: bump 0.4s linear;
+    animation-delay: 0s;
 }
 .item-a{
     grid-area: item-a;
@@ -180,7 +188,10 @@ main img{
 }
 /* main ends */
 
-/* section starts */
+/* section-about starts */
+.about{
+    padding: 10px 20px;
+}
 .section-header{
     width: 100%;
     height: 100px;
@@ -188,7 +199,12 @@ main img{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 70px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    background-color: #fff;
+    box-shadow: #464040 2px 8px 25px;
+    border-radius: 20px;
+    transition: 0.5s;
 }
 .section-header img{
     max-width: 70px;
@@ -201,23 +217,216 @@ main img{
     margin-left: -10px;
     text-transform: uppercase;
 }
+.section-header:hover{
+    scale: 1.05;
+}
 article{
     width: 100%;
-    padding: 10px 20px;
 }
 article p{
     font-family: 'Blinker-Regular';
     font-size: 20px;
     text-align: justify;
 }
+/* section-about ends */
 
+/* section-brand starts */
+.brand{
+    padding: 10px 20px;
+}
+.brand-gallery{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.brand-row{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.brand-row img{
+    width: 100%;
+}
+.brand-row div{
+}
+/* .brand-row-1 div{
+    width: 33.33%;
+}
+.brand2-1{
+    width: 22%;
+}
+.brand2-2{
+    width: 78%;
+}
+.brand3-1{
+    width: 77%;
+}
+.brand3-2{
+    width: 23%;
+} */
+/* section-brand ends */
 
+/* section-graphic starts */
+.graphic{
+    padding: 10px 20px;
+}
+.graphic-gallery{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.graphic-row{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.graphic-row img{
+    width: 100%;
+}
+.graphic-row div{
+}
+/* .graphic-row-1 div{
+    width: 50%;
+} */
+/* section-graphic starts */
 
+/* section-social starts */
+.social{
+    padding: 10px 20px;
+}
+.social-gallery{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.social-row{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.social-row img{
+    width: 100%;
+}
+.social-row div{
+}
+/* .social-row-1 div{
+    width: 50%;
+} */
+/* section-social starts */
 
-
+/* footer starts */
+footer{
+    width: 100%;
+    height: fit-content;
+    background-color: #0f0101ef;
+}
+.footer-row{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 30px;
+}
+.footer-buttons{
+    font-family: 'Blinker-Regular';
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid #1365e0;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding-right: 2px;
+}
+.footer-buttons-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #1365e0;
+    font-weight: bold;
+    text-transform: capitalize
+}
+.footer-buttons a{
+    text-decoration: none;
+    padding: 15px 10px;
+    background-color: #1365e0;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 2px;
+    text-transform: uppercase;
+    width: fit-content;
+    transition: 0.5s;
+}
+.footer-buttons a:hover{
+    color: #fff;
+    scale: 1.1;
+}
+.footer-buttons img{
+    width: 60px;
+}
+.vl{
+    width: 2px;
+    height: 100%;
+    background-color: #000;
+    margin: 0px 20px;
+    display: none;
+}
+.footer-comment{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Blinker-Regular';
+    align-items: center;
+    justify-content: center;
+}
+.footer-comment textarea{
+    width: 100%;
+    height: 80px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    font-family: 'Blinker-Regular';
+}
+.footer-comment button{
+    width: 250px;
+    padding: 5px 0;
+    text-transform: uppercase;
+    font-family: 'Blinker-Bold';
+    font-size: 20px;
+    background-color: #1365e0;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.footer-comment button img{
+    width: 25px;
+    margin: 0 10px;
+}
+.copyright{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+}
+/* footer ends */
 
 @keyframes bump{
-    0%{opacity: 0; scale: 1;}
+    0%{opacity: 0; scale: 1; rotate: 0deg;}
     50%{opacity: 0.5; scale: 1.3;}
-    100%{opacity: 1; scale: 1;}
+    100%{opacity: 1; scale: 1; rotate: 360deg;}
 }
