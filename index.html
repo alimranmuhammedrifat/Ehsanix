@@ -15,7 +15,7 @@
         </label>
         <div class="searchbar">
             <img src="img/search.png" alt="not found">
-            <input type="text" name="search" id="search">
+            <input type="text" name="searchInput" id="searchInput">
             <img src="img/mic.png" alt="not found">
         </div>
         <div class="phone">
@@ -66,7 +66,7 @@
         </article>
         <hr>
     </section>
-    <section class="brand">
+    <section class="projects brand" data-keywords="company shop org logo branding">
         <div class="section-header">
             <h4>brand design</h4>
             <img src="img/brand.png" alt="not found">
@@ -88,7 +88,7 @@
         </div>
         <hr>
     </section>
-    <section class="graphic">
+    <section class="projects graphic" data-keywords="poster liflet banner graphic illustrator photoshop">
         <div class="section-header">
             <h4>Graphic design</h4>
             <img src="img/graphic.png" alt="not found">
@@ -111,7 +111,7 @@
         </div>
         <hr>
     </section>
-    <section class="social">
+    <section class="projects social" data-keywords="facebook instagram twitter tiktok post marketing ad boost page groups">
         <div class="section-header">
             <h4>social media design</h4>
             <img src="img/social.png" alt="not found">
@@ -148,7 +148,7 @@
         <hr>
     </section>
     <footer>
-        <div class="footer-row">
+        <div class="footer-content">
             <div class="footer-comment">
                 <form action="https://formspree.io/f/mdklnvnb" method="post">
                     <textarea name="comment" id="comment" placeholder="Take a consult"></textarea>
@@ -164,7 +164,7 @@
                 </div>
             </div>
         </div>
-        <div class="copyright">
+        <div class="footer-copyright">
             <p>All rights reserved to &copy;Ehsanix limited</p>
         </div>
     </footer>
@@ -187,12 +187,39 @@
       audio.play().catch(()=>{}); 
     }
   });
+
+  const searchInput = document.getElementById("searchInput");
+  const projectSections = document.querySelectorAll("section.projects");
+  const aboutSection = document.querySelector("section.about");
+
+  searchInput.addEventListener("keyup", function() {
+    let filter = searchInput.value.toLowerCase().trim();
+
+    // Hide About while searching
+    if (filter.length > 0) {
+      aboutSection.classList.add("hidden");
+    } else {
+      aboutSection.classList.remove("hidden");
+    }
+
+    // Filter project sections
+    projectSections.forEach(section => {
+      let visibleText = section.textContent.toLowerCase();
+      let keywords = section.getAttribute("data-keywords")?.toLowerCase() || "";
+      
+      if (visibleText.includes(filter) || keywords.includes(filter)) {
+        section.classList.remove("hidden");
+      } else {
+        section.classList.add("hidden");
+      }
+    });
+  });
 </script>
+
+
 
 </body>
 </html>
-
-
 
 
 
